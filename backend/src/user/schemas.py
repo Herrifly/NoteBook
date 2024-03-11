@@ -3,7 +3,9 @@ from typing import Annotated, Optional, List
 from bson import ObjectId
 from pydantic import BaseModel, BeforeValidator, Field, ConfigDict
 
-PyObjectId = Annotated[str, BeforeValidator(str)]
+from database import PyObjectId
+
+
 
 class UserRead(BaseModel):
     id: Optional[PyObjectId] = Field(alias='_id', default=None)

@@ -1,7 +1,7 @@
 from bson import ObjectId
 from fastapi import APIRouter, HTTPException, status, Body
 
-from database import users, MongoClient
+from database import users
 from user.schemas import Users, UserRead, User
 
 router = APIRouter(
