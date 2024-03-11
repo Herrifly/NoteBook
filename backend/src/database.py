@@ -1,3 +1,8 @@
 from pymongo import MongoClient
 
-conn = MongoClient()
+client = MongoClient("mongodb://localhost:27017/notebook")
+
+db = client["notebook"]
+
+users = db['users']
+notes = db['notes']
